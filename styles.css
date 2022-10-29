@@ -1,0 +1,480 @@
+/* To use fontawesome, login and get your kits code. Paste the script in your head tag, then search for the icon.  */
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "poppins", sans-serif;
+  box-sizing: border-box;
+}
+
+/* If you notice height is looking greater than width, when both are the same dimension in px, add box-sizing border ox */
+/* Box-sizing is for border and padding only */
+
+body {
+  background: #efefef;
+}
+
+nav {
+  /* border: 2px solid red; */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #1876f2;
+  padding: 5px 5%;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+/* STICKY */
+/* An element with position: sticky; is positioned based on the user's scroll position.
+
+ A sticky element toggles between relative and fixed, depending on the scroll position. It is positioned relative until a given offset position is met in the viewport - then it "sticks" in place (like position:fixed).
+
+  Just take it that we always use sticky with top:0
+*/
+
+/* NOTE: Always remember that flex items determine size of flex container, and their size can make the padding appear larger than is set */
+
+.logo {
+  width: 160px;
+  margin-right: 45px;
+}
+
+.nav-left,
+.nav-right {
+  display: flex;
+  align-items: center;
+}
+
+/* NOTE: If you do not align items center, the flex items will look stretched */
+
+.nav-left ul li {
+  list-style: none;
+  display: inline-block;
+}
+
+/* NOTE: when using a list tag instead of flex for nav icons, set their display inline-block */
+
+.nav-left ul li img {
+  width: 28px;
+  margin: 0 15px;
+}
+
+/* NOTE: Again we are using margin left and right (overlapping) to separate the icons instead of flex space between */
+
+.nav-user-icon img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  cursor: pointer;
+  object-fit: cover;
+}
+
+.nav-user-icon {
+  margin-left: 30px;
+}
+
+.search-box {
+  background: #efefef;
+  width: 350px;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  padding: 0 15px;
+}
+
+.search-box img {
+  width: 18px;
+}
+
+.search-box input {
+  width: 100%;
+  background: transparent;
+  padding: 10px;
+  outline: none;
+  border: 0;
+}
+/* Outline property for input box is when we click inside the box, there is a white outline that is different from the default black border. */
+/* We just set the border width to 0, instead of just changing the color */
+/* NOTE: The search box input border thickness/width increased the height of the serch-box container */
+/* NOTE: Even without display flex, padding in a child can make a parent increase in width and height.  */
+
+.online {
+  position: relative;
+  border: 2px solid red;
+}
+
+.online::after {
+  content: "";
+  width: 7px;
+  height: 7px;
+  border: 2px solid #fff;
+  border-radius: 50%;
+  background: #41db51;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+/* PLEASE NOTE: When using absolute positioning top, bottom, right, and left, the element is positioned on the INSIDE / WITHIN  the borders of the relative element, NOT the outside of the border. Only the top is set to inside by default, others are not,  */
+
+/* NOTE: Without taking the .online::after out of document flow with position absolute, the border radius will not look like a circle. It would look oval */
+
+/* What is the after:: pseudo selector? */
+/*
+.float-container {
+  border: 4px solid black;
+  width: 200px;
+  height: 200px;
+}
+
+.float-container .box-1 {
+  border: 2px solid red;
+  width: 500px;
+  height: 300px;
+  float: left;
+}
+
+.float-container .box-2 {
+  border: 2px solid green;
+  width: 80px;
+  height: 80px;
+  float: left;
+}
+
+.float-container .box-3 {
+  border: 2px solid blue;
+  width: 80px;
+  height: 80px;
+  float: left;
+}
+
+.clear {
+  clear: left;
+} */
+
+/* FLOAT AND CLEAR */
+
+/* Use an img or div, and set its float to left or right. Then below it, add an inline element like a span or even a block element like div p or h1 tag with the text
+   you want. Then they will flow on the opposite side of the floated block div or img. All other elements below the floated element will flow around it as long as its height dimensions
+
+   CLEAR
+
+   To stop the line boxes (elements below the floated element) flowing around the outside of a floated box, you neeed to apply a CLEAR property to the element that contains those line boxes.
+
+   NOTE PLEASE: The clear property can be left, right, both or none, and IT INDICATES WHICH SIDE OF THE BOX SHOULD NOT BE NEXT TO A FLOATED BOX.
+   So in this example, I floated box-1 to the left, and it means all other elements below it go arount it to the left. Then the first div below it with a class clear is cleared to the right.
+   This means that the div with class clear (left) should NOT have its left side next to the floated element
+
+   NOTE PLEASE: When you clear an element, THE BROWSER ADDS ENOUGH MARGIN TO THE TOP OF THE ELEMENT TO PUSH THE ELEMENT'S TOP BORDER EDGE VERTICALLY DOWN, PAST THE FLOAT.
+*/
+
+/* Always add content to a div. If you don't, even if you give it a width and height, it will not show */
+
+/* An anchor tag (a) is inline, and we can set it's display to block */
+/* NOTE: It is possible to cause an element to generate no box at all by setting its display property to none. */
+
+/* POSITIONING */
+
+/* NOTE: There are 3 basic poaitioning schemes in CSS: (1) NORMAL FLOW (2) FLOATS (3) ABSOLUTE POSITIONING......Unless specified, all boxes start life ein positioned in the normal flow.*/
+/* As the name suggests, the position of an element's box in the normalflow will be dictated by that element's position in the HTML */
+/* Block level boxes will appear vertically one after the other. Inline boxes are laid out in a line horizontally */
+/* NOTE: Vertical padding, borders, and margins will have no effect on the height of an inline box */
+/* NOTE: Also setting an explicit height or width on an inline box will have no effect either */
+/* NOTE: The only way to alter or set the dimensions of an inline box (box of an inline element) is to change the line heihgt property or horizontal borders, padding, or margins */
+
+/* INLINE BLOCK */
+
+/* This allows elements line up horizontally as if it were an inline element, however, the contents of the box behave as though the box were a block-level, including being able to explicitly set widths, heights, vertical margins, and padding */
+
+/* RELATIVE POSITIONING */
+/* If you relatively position an element, it will stay exactly where it is. You can then shift the element relative to its starting point by setting a vertical or horizontal position */
+/* With relative positioning, the element continues to occupy the original space, whether or not it is offset. As such, offsetting the element can cause it to overlap other boxes*/
+/* Relative positioning is actually considered part of the normal flow-positioning model, as the position of the element is relative to its position in the normal flow */
+/* Offset is relative to its normal or initial position */
+
+/* ABSOLUTE POSITIONING */
+/* Absolute positioning takes the element out the flow of the document, thus taking up no space. Other elements in the normal flow
+   of the document will act as though the absolutely positioned element was never there.
+*/
+/* Offset is relative to parent container i.e, an absolutely positioned element is positioned in relation to its nearest positioned ancestor.
+   If the element has no positioned ancestors, it will be positioned in relation to the initial containing block.
+*/
+
+/* Because absolutely positioned boxes are taken out of the flow of the document, they can overlap other elements on the page. We can control this with z-index. */
+
+/* It is wise to give a parent container you want to set as relative a dimension of width and height because of an error in internet explorer */
+
+/* To avoid the risk of overlapping when using position absolute and a relatively positioned ancestor, the elements must be given a fixed dimensions */
+
+/* NOOOTEEEEE */
+/*
+  The main problem people have with positioning is remembering which type of
+  positioning is which. Relative positioning is “relative” to the element’s initial
+  position in the flow of the document, whereas absolute positioning is “relative”
+  to nearest positioned ancestor or, if one doesn’t exist, the initial container block
+*/
+
+/* FIXED POSITIONING */
+
+/* This is a sub-category of absolute positioning. The difference is that a fixed element's containing block is the VIEWPORT. */
+/* This allows us to create floating elements that always stay at the same position in the window */
+
+/* FLOATING: Applies to block elements */
+/* A floated box can either be shifted to the left or right until its outer edge touches the edge of its containing box or ANOTHER FLOATED BOX */
+/* Because floated boxes aren't in the normal flow of the document, block boxes in the regular flow of the document behave as if the floated box wasn't there  */
+
+/* When you float Box 1 to the left, it is taken out of the document and moved left of the edge of its containing block
+   Because it is no longer in the flow, it takes up no space and actually sits on top of Box 2, obscuring it from vies
+
+   If the containing block is too narrow for all floated elements to fit horizontally, the remaining float will drop down until there is sufficient space
+*/
+
+/* LINE BOXES AND CLEARING */
+/* We saw that floating an element takes it out of document flow where it no longer exerts an effect on non-floated elements.....but this is NOT STRICTLY TRUE
+
+   If floated element is followed by an element in the flow of document, the element's box will behave as if the float doesn't exist.
+   HOWEVER, THE TEXTURAL CONTENT OF THE BOX RETAINS SOME MEMORY OF THE FLOATED ELEMENT AND MOVES OUT OF THE WAY TO MAKE ROOM
+
+   In technical terms, a line box next to a floated element is shortened to make room for the floated element, thereby flowing around the floated box.
+   In fact, floats were created to allow text to flow around images.
+
+   NOTE: You can also use overflow: hidden on a parent container with floated children to clear
+*/
+
+/* PSEUDO-ELEMENTS AND PSEUDO-CLASSES */
+
+/* PSEUDO-ELEMENTS: They are added to selectors but instead of describing a special state, they allow you to style certain parts of a document */
+
+/* PSEUDO-ELEMENT AND CONTENT ATTRIBUTE */
+
+/* The CONTENT attribute is required for pseudo-elements to render; however, the attribute can have an empty value (e.g. content: "") */
+
+/*
+  ::after = inserts content after the content of an element
+  ::before = inserts content before the content of an element
+  ::first-letter = selects the first letter of each element
+  ::first-line = selects the first line of each element
+  ::selection = matches the portion of an element that is selected by a user
+
+*/
+
+/* PSEUDO-CLASSES */
+/* PSEUDO-CLASSES: These are keywords that allow selection based on information that lies outside of the document tree or that cannot be expressed by other selectors or combinators. This information can be associated to a certain state, location, negations, or languages
+
+:active = applies to any element activated by the user
+:target = selects the current active #news element
+:first-child = represents any element that is the first child element of its parent
+:focus = applies to any element which has the users focus. This can be given by the user's keyoard, mouse events, or other forms of input.
+
+
+CHILD PSEUDO CLASS
+
+NOTE: The :nth-child(an + b) CSS pseudo-class matches an element that has an + b -1 siblings BEFORE it in te document tree
+
+pseudo-selector        1 2 3 4 5 6 7 8 9 10
+:first-child           *
+:nth-child(3)              *
+:nth-child(n+3)            * * * * * * * *
+:nth-child(3n)             *     *     *
+:nth-child(3n+1)       *     *     *     *
+:nth-child(-n+3)       * * *
+:nth-child(odd)        *   *   *   *   *
+:nth-child(even)         *   *   *   *   *
+:last-child                              *
+:nth-last-child(3)                   *
+*/
+
+/* Main content starts */
+.container {
+  display: flex;
+  border: 3px solid red;
+  justify-content: space-between;
+  padding: 13px 5%;
+}
+
+.left-sidebar {
+  background: #cbdffa;
+  /* background: red; */
+  flex-basis: 25%;
+  position: sticky;
+  top: 70px;
+  align-self: flex-start;
+  /* height: 100vh; */
+}
+
+.right-sidebar {
+  background: #cbdffa;
+  /* background: #fff; */
+  /* background: red; */
+  flex-basis: 25%;
+  position: sticky;
+  top: 70px;
+  align-self: flex-start;
+  /* height: 100vh; */
+  padding: 20px;
+  border-radius: 4px;
+  color: #626262;
+}
+
+.main-content {
+  flex-basis: 47%;
+  /* border: 3px silid purple; */
+  /* height: 100vh; */
+  /* background: blue; */
+}
+
+/* align-self : controls alignment of an individual flex item on the cross axis. */
+/* align-items : controls alignment of all items on the cross axis. */
+
+/* Whenever we add position sticky, we need to add top */
+
+.imp-links a,
+.shortcut-links a {
+  text-decoration: none;
+  display: flex;
+  /* justify-content: space-between; */
+  /* border: 2px solid red; */
+  align-items: center;
+  margin-bottom: 30px;
+  color: #626262;
+  width: fit-content;
+}
+
+.imp-links a img {
+  margin-right: 5px;
+  width: 25px;
+}
+
+.imp-links a:last-child {
+  color: #1876f2;
+}
+
+.imp-links {
+  border-bottom: solid 1px #ccc;
+}
+
+.shortcut-links a img {
+  width: 40px;
+  margin-right: 15px;
+  border-radius: 4px;
+}
+
+.shortcut-links p {
+  margin: 25px 0;
+  font-weight: 500;
+  color: #626262;
+}
+
+.sidebar-title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 18px;
+  /* border: 2px solid red; */
+}
+
+.right-sidebar h4 {
+  font-weight: 600;
+  font-size: 16px;
+}
+
+.sidebar-title a {
+  text-decoration: none;
+  color: #1876f2;
+  font-size: 12px;
+}
+
+.event {
+  display: flex;
+  border: 2px solid red;
+  margin-bottom: 20px;
+  font-size: 14px;
+}
+
+.left-event {
+  border: 2px solid green;
+  border-radius: 10px;
+  width: 65px;
+  height: 65px;
+  margin-right: 15px;
+  padding-top: 10px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.left-event span {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  /* border: 2px solid yellow; */
+  background: #1876f2;
+  color: #fff;
+  padding: 4px 0;
+  font-size: 10px;
+}
+
+/* PLEASE NOTE: A child element text can be centered within its parent by setting its width to 100% */
+
+.event p {
+  font-size: 12px;
+}
+
+.event a {
+  font-size: 12px;
+  text-decoration: none;
+  color: #1876f2;
+}
+
+.right-event {
+  border: 2px solid orange;
+}
+
+.sidebar-ads {
+  width: 100%;
+  margin-bottom: 20px;
+  border-radius: 4px;
+}
+
+.online .myimage-container img {
+  object-fit: cover;
+}
+
+/* PLEASE NOTE: Avoid putting class on an img tag and styling the class. Rather, you should use a container div, and then target and style the img tag. */
+
+.online-list {
+  display: flex;
+  border: 2px solid red;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.online-list .online img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  /* border: 1px solid red; */
+}
+
+.online-list .online {
+  width: 40px;
+  /* border-radius: 50%; */
+  margin-right: 15px;
+  border: 1px solid red;
+}
+
+.online-list .online::after {
+  top: unset;
+  bottom: 5px;
+}
+
+/* What is the unset property? */
+
+/* PLEASE NOTE: Setting the font-size property can affect the size of h1, h2, h3, h4 tags */
+/* What is width fit-content: */
+
+/* What is the default flex direction for anchor tag */
+/* Main content ends */
