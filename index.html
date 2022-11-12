@@ -26,10 +26,58 @@
           <img src="images/search.png" alt="" />
           <input type="text" placeholder="Search" />
         </div>
-        <div class="nav-user-icon online">
+        <div class="nav-user-icon online" onclick="settingsMenuToggle()">
           <img src="images/member-10.jpg" alt="" />
         </div>
       </div>
+
+      <!-- Settings menu start -->
+      <div class="settings-menu">
+        <div id="dark-btn">
+          <span></span>
+        </div>
+        <div class="settings-menu-inner">
+          <div class="user-profile">
+            <img src="images/member-10.jpg" alt="" />
+            <div>
+              <p>Tobe Oscar</p>
+              <a href="#">See your profile</a>
+            </div>
+          </div>
+          <hr />
+          <div class="user-profile">
+            <img src="images/feedback.png" alt="" />
+            <div>
+              <p>Give Feedback</p>
+              <a href="#">Help us to improve the new design</a>
+            </div>
+          </div>
+          <hr />
+          <div class="setting-links">
+            <img src="images/setting.png" class="setting-icon" />
+            <a href="#"
+              >Settings & Privacy <img src="images/arrow.png" width="10px"
+            /></a>
+          </div>
+          <div class="setting-links">
+            <img src="images/help.png" class="setting-icon" />
+            <a href="#"
+              >Help & Support <img src="images/arrow.png" width="10px"
+            /></a>
+          </div>
+          <div class="setting-links">
+            <img src="images/display.png" class="setting-icon" />
+            <a href="#"
+              >Display & Accessibility <img src="images/arrow.png" width="10px"
+            /></a>
+          </div>
+          <div class="setting-links">
+            <img src="images/logout.png" class="setting-icon" />
+            <a href="#">Logout <img src="images/arrow.png" width="10px" /></a>
+          </div>
+        </div>
+      </div>
+      <!-- Settings menu end -->
     </nav>
     <div class="container">
       <div class="left-sidebar">
@@ -57,7 +105,214 @@
           >
         </div>
       </div>
-      <div class="main-content"></div>
+      <div class="main-content">
+        <div class="story-gallery">
+          <div class="story story1">
+            <img src="images/upload.png" alt="" />
+            <p>Post Story</p>
+          </div>
+          <div class="story story2">
+            <div class="myimage-container">
+              <img src="images/member-10.jpg" alt="" />
+            </div>
+            <p>Tobe Oscar</p>
+          </div>
+          <div class="story story3">
+            <img src="images/member-2.png" alt="" />
+            <p>Alison</p>
+          </div>
+          <div class="story story4">
+            <img src="images/member-3.png" alt="" />
+            <p>Jackson</p>
+          </div>
+          <div class="story story5">
+            <img src="images/member-4.png" alt="" />
+            <p>Samona</p>
+          </div>
+        </div>
+        <div class="write-post-container">
+          <div class="user-profile">
+            <img src="images/member-10.jpg" alt="" />
+            <div>
+              <p>Tobe Oscar</p>
+              <small>Public <i class="fas fa-caret-down"></i></small>
+            </div>
+          </div>
+          <div class="post-input-container">
+            <textarea
+              rows="3"
+              placeholder="What's on your mind, Tobe?"
+            ></textarea>
+            <div class="add-post-links">
+              <a href="#"
+                ><img src="images/live-video.png" alt="" />Live Video</a
+              >
+              <a href="#"><img src="images/photo.png" alt="" />Photo/Video</a>
+              <a href="#"
+                ><img src="images/feeling.png" alt="" />Feeling/Activity</a
+              >
+            </div>
+          </div>
+        </div>
+        <div class="post-container">
+          <div class="post-row">
+            <div class="user-profile">
+              <img src="images/member-10.jpg" alt="" />
+              <div>
+                <p>Tobe Oscar</p>
+                <span>November 6 2022, 12:25 pm</span>
+              </div>
+            </div>
+            <a href="#"><i class="fas fa-ellipsis-v"></i></a>
+          </div>
+
+          <p class="post-text">
+            Subscribe <span>@Digitaldome</span> Youtube channel to watch more
+            videos on website development and UI designs.
+            <a href="#">#Digitaldome</a>
+            <a href="#">#YoutubeChannel</a>
+          </p>
+          <img src="images/feed-image-1.png" alt="" class="post-img" />
+          <div class="post-row">
+            <div class="activity-icons">
+              <div><img src="images/like-blue.png" />120</div>
+              <div><img src="images/comments.png" />45</div>
+              <div><img src="images/share.png" />20</div>
+            </div>
+            <div class="post-profile-icons">
+              <img src="images/member-10.jpg" alt="" />
+              <i class="fas fa-caret-down"></i>
+            </div>
+          </div>
+        </div>
+        <div class="post-container">
+          <div class="post-row">
+            <div class="user-profile">
+              <img src="images/profile-pic.png" alt="" />
+              <div>
+                <p>John Nick</p>
+                <span>November 6 2022, 12:25 pm</span>
+              </div>
+            </div>
+            <a href="#"><i class="fas fa-ellipsis-v"></i></a>
+          </div>
+
+          <p class="post-text">
+            Like and share this video with friends, tag
+            <span>@Digitaldome</span> facebook page on your post. Ask your
+            doubts in the commnets.
+            <a href="#">#Digitaldome</a>
+            <a href="#">#YoutubeChannel</a>
+          </p>
+          <img src="images/feed-image-2.png" alt="" class="post-img" />
+          <div class="post-row">
+            <div class="activity-icons">
+              <div><img src="images/like.png" />100</div>
+              <div><img src="images/comments.png" />35</div>
+              <div><img src="images/share.png" />8</div>
+            </div>
+            <div class="post-profile-icons">
+              <img src="images/profile-pic.png" alt="" />
+              <i class="fas fa-caret-down"></i>
+            </div>
+          </div>
+        </div>
+        <div class="post-container">
+          <div class="post-row">
+            <div class="user-profile">
+              <img src="images/member-10.jpg" alt="" />
+              <div>
+                <p>Tobe Oscar</p>
+                <span>November 6 2022, 12:25 pm</span>
+              </div>
+            </div>
+            <a href="#"><i class="fas fa-ellipsis-v"></i></a>
+          </div>
+
+          <p class="post-text">
+            Subscribe <span>@Digitaldome</span> Youtube channel to watch more
+            videos on website development and UI designs.
+            <a href="#">#Digitaldome</a>
+            <a href="#">#YoutubeChannel</a>
+          </p>
+          <img src="images/feed-image-3.png" alt="" class="post-img" />
+          <div class="post-row">
+            <div class="activity-icons">
+              <div><img src="images/like-blue.png" />120</div>
+              <div><img src="images/comments.png" />45</div>
+              <div><img src="images/share.png" />20</div>
+            </div>
+            <div class="post-profile-icons">
+              <img src="images/member-10.jpg" alt="" />
+              <i class="fas fa-caret-down"></i>
+            </div>
+          </div>
+        </div>
+        <div class="post-container">
+          <div class="post-row">
+            <div class="user-profile">
+              <img src="images/profile-pic.png" alt="" />
+              <div>
+                <p>John Nick</p>
+                <span>November 6 2022, 12:25 pm</span>
+              </div>
+            </div>
+            <a href="#"><i class="fas fa-ellipsis-v"></i></a>
+          </div>
+
+          <p class="post-text">
+            Subscribe <span>@Digitaldome</span> Youtube channel to watch more
+            videos on website development and UI designs.
+            <a href="#">#Digitaldome</a>
+            <a href="#">#YoutubeChannel</a>
+          </p>
+          <img src="images/feed-image-4.png" alt="" class="post-img" />
+          <div class="post-row">
+            <div class="activity-icons">
+              <div><img src="images/like-blue.png" />120</div>
+              <div><img src="images/comments.png" />45</div>
+              <div><img src="images/share.png" />20</div>
+            </div>
+            <div class="post-profile-icons">
+              <img src="images/profile-pic.png" alt="" />
+              <i class="fas fa-caret-down"></i>
+            </div>
+          </div>
+        </div>
+        <div class="post-container">
+          <div class="post-row">
+            <div class="user-profile">
+              <img src="images/member-10.jpg" alt="" />
+              <div>
+                <p>Tobe Oscar</p>
+                <span>November 6 2022, 12:25 pm</span>
+              </div>
+            </div>
+            <a href="#"><i class="fas fa-ellipsis-v"></i></a>
+          </div>
+
+          <p class="post-text">
+            Subscribe <span>@Digitaldome</span> Youtube channel to watch more
+            videos on website development and UI designs.
+            <a href="#">#Digitaldome</a>
+            <a href="#">#YoutubeChannel</a>
+          </p>
+          <img src="images/feed-image-5.png" alt="" class="post-img" />
+          <div class="post-row">
+            <div class="activity-icons">
+              <div><img src="images/like-blue.png" />120</div>
+              <div><img src="images/comments.png" />45</div>
+              <div><img src="images/share.png" />20</div>
+            </div>
+            <div class="post-profile-icons">
+              <img src="images/member-10.jpg" alt="" />
+              <i class="fas fa-caret-down"></i>
+            </div>
+          </div>
+        </div>
+
+        <button type="button" class="load-more-btn">Load More</button>
+      </div>
       <div class="right-sidebar">
         <div class="sidebar-title">
           <h4>Events</h4>
@@ -115,6 +370,10 @@
           <p>Samona Rose</p>
         </div>
       </div>
+    </div>
+
+    <div class="footer">
+      <p>Copyright 2022 - Digitaldome Youtube Channel</p>
     </div>
 
     <script src="scripts.js"></script>

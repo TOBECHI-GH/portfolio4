@@ -1,4 +1,34 @@
 /* To use fontawesome, login and get your kits code. Paste the script in your head tag, then search for the icon.  */
+/* PLEASE NOTE: When using the debugger tool to chech dimensions of elements in the elements tab (width and height), it is the chatbox-like dimension given that
+   you should be looking at, NOT the Box model below. The box model DOES NOT add the break down, but the chatbox does.
+*/
+
+/* NOTE: You can use any image resizing tool on the internet */
+
+/* Is aspect ratio, height/width or width/height??? */
+
+/* Border-box is just saying, if there is a child element whose width determines the width of its parent, when I add border or padding to the parent,
+   don't increase the content size of the parent.
+*/
+
+/*
+                             border-box: off      border-box: on
+
+  parent: without border:   low content width    high content width
+
+  parent: with border:      high content width   low content width
+
+  When border-box is on and the parent has border, its CONTENT WIDTH will be the width of the widest child. But its TOTAL WIDTH will be the content width plus the left and right padding.
+
+  When border-box is off and the parent has border, the CONTENT OF THE PARENT CONTAINER WILL INCREASE, and then the TOTAL WIDTH will be the sum of the
+  increased content width and the left and right borders.
+
+  THEREFORE, border-box on is used to prevent the content area of a parent element from increasing, when this parent element has borde.
+
+  NOTE: When there is no border and there is also no box-sizing, parent content width is slightly less than when there is no border but there is box-sizing
+
+*/
+
 * {
   margin: 0;
   padding: 0;
@@ -6,19 +36,32 @@
   box-sizing: border-box;
 }
 
+:root {
+  --body-color: #efefef;
+  --nav-color: #1876f2;
+  --bg-color: #fff;
+}
+
+.dark-mode {
+  --body-color: #0a0a0a;
+  --nav-color: #000;
+  --bg-color: #000;
+}
+
 /* If you notice height is looking greater than width, when both are the same dimension in px, add box-sizing border ox */
 /* Box-sizing is for border and padding only */
 
 body {
-  background: #efefef;
+  background: var(--body-color);
+  transition: background 0.3s;
 }
 
 nav {
-  /* border: 2px solid red; */
+  border: 2px solid red;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background: #1876f2;
+  background: var(--nav-color);
   padding: 5px 5%;
   position: sticky;
   top: 0;
@@ -305,7 +348,7 @@ pseudo-selector        1 2 3 4 5 6 7 8 9 10
 
 .right-sidebar {
   background: #cbdffa;
-  /* background: #fff; */
+  /* background: var(--bg-color); */
   /* background: red; */
   flex-basis: 25%;
   position: sticky;
@@ -319,7 +362,7 @@ pseudo-selector        1 2 3 4 5 6 7 8 9 10
 
 .main-content {
   flex-basis: 47%;
-  /* border: 3px silid purple; */
+  /* border: 3px solid purple; */
   /* height: 100vh; */
   /* background: blue; */
 }
@@ -478,3 +521,611 @@ pseudo-selector        1 2 3 4 5 6 7 8 9 10
 
 /* What is the default flex direction for anchor tag */
 /* Main content ends */
+
+.story-gallery {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  border: 2px solid red;
+}
+
+.story {
+  border: 2px solid green;
+  flex-basis: 18%;
+  padding-top: 32%;
+  position: relative;
+  background-position: center;
+  background-size: cover;
+  border-radius: 10px;
+}
+
+.story img {
+  position: absolute;
+  width: 45px;
+  height: 45px;
+  border: 5px solid #1876f2;
+  border-radius: 50%;
+  top: 10px;
+  left: 10px;
+}
+
+.story p {
+  position: absolute;
+  bottom: 10px;
+  width: 100%;
+  /* border: 1px solid red; */
+  text-align: center;
+  color: #fff;
+  font-size: 14px;
+}
+
+.story .myimage-container img {
+  object-fit: cover;
+}
+
+.story1 {
+  background-image: linear-gradient(transparent, rgba(0, 0, 0, 0.5)),
+    url(images/status-1.png);
+}
+
+.story2 {
+  background-image: linear-gradient(transparent, rgba(0, 0, 0, 0.5)),
+    url(images/status-2.png);
+}
+
+.story3 {
+  background-image: linear-gradient(transparent, rgba(0, 0, 0, 0.5)),
+    url(images/status-3.png);
+}
+
+.story4 {
+  background-image: linear-gradient(transparent, rgba(0, 0, 0, 0.5)),
+    url(images/status-4.png);
+}
+
+.story5 {
+  background-image: linear-gradient(transparent, rgba(0, 0, 0, 0.5)),
+    url(images/status-5.png);
+}
+
+.story.story1 img {
+  top: unset;
+  left: 50%;
+  bottom: 40px;
+  transform: translateX(-50%);
+  border: 0;
+  width: 35px;
+  height: 35px;
+}
+
+.write-post-container {
+  width: 100%;
+  border: 2px solid green;
+  background: var(--bg-color);
+  border-radius: 6px;
+  padding: 20px;
+  color: #626262;
+}
+
+.user-profile {
+  display: flex;
+  align-items: center;
+}
+
+.user-profile img {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  margin-right: 10px;
+  object-fit: cover;
+}
+
+.user-profile p {
+  margin-bottom: -5px;
+  font-weight: 600;
+  color: #626262;
+}
+
+.user-profile small {
+  font-size: 12px;
+}
+
+.post-input-container {
+  border: 2px solid red;
+  padding-left: 55px;
+  padding-top: 20px;
+}
+
+.post-input-container textarea {
+  width: 100%;
+  border: 0;
+  outline: 0;
+  border-bottom: 1px solid #ccc;
+  background: transparent;
+  resize: none;
+}
+
+.add-post-links {
+  border: 1px solid purple;
+  display: flex;
+  margin-top: 10px;
+}
+
+.add-post-links a {
+  text-decoration: none;
+  display: flex;
+  border: 1px solid orange;
+  align-items: center;
+  color: #626262;
+  margin-right: 30px;
+  font-size: 13px;
+}
+
+.add-post-links a img {
+  width: 20px;
+  margin-right: 10px;
+}
+
+.post-container {
+  border: 2px solid green;
+  width: 100%;
+  background: var(--bg-color);
+  border-radius: 6px;
+  padding: 20px;
+  color: #626262;
+  margin: 20px 0;
+}
+
+.user-profile span {
+  font-size: 13px;
+  color: #9a9a9a;
+}
+
+.user-profile p {
+  /* border: 1px solid red; */
+  padding-bottom: 2px;
+}
+
+.post-text {
+  color: #9a9a9a;
+  margin: 15px 0;
+  font-size: 15px;
+}
+
+.post-text span {
+  color: #626262;
+  font-weight: 500;
+}
+
+.post-text a {
+  color: #1876f2;
+  text-decoration: none;
+}
+
+.post-img {
+  width: 100%;
+  border-radius: 4px;
+  margin-bottom: 5px;
+}
+
+.post-row {
+  border: 2px solid red;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.post-row a {
+  color: #9a9a9a;
+}
+
+.activity-icons div img {
+  width: 18px;
+  margin-right: 10px;
+}
+
+.activity-icons div {
+  margin-right: 30px;
+}
+
+.activity-icons {
+  border: 1px solid blue;
+  display: flex;
+  align-items: center;
+}
+
+.post-profile-icons {
+  display: flex;
+  align-items: center;
+}
+
+.post-profile-icons img {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  margin-right: 5px;
+  object-fit: cover;
+}
+
+.load-more-btn {
+  border: 1px solid #9a9a9a;
+  display: block;
+  margin: auto;
+  cursor: pointer;
+  padding: 5px 10px;
+  color: #626262;
+  background: transparent;
+  border-radius: 4px;
+}
+
+.footer {
+  border: 2px solid green;
+  text-align: center;
+  color: #9a9a9a;
+  padding: 10px 0 20px;
+  font-size: 13px;
+}
+
+.settings-menu {
+  /* border: 1px solid red; */
+  position: absolute;
+  width: 90%;
+  max-width: 350px;
+  /* height: 500px; */
+  background: var(--bg-color);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+  border-radius: 4px;
+  overflow: hidden;
+  top: 108%;
+  right: 5%;
+  max-height: 0;
+  transition: max-height 0.3s;
+}
+
+/* settings-menu-height is not used in the HTML file */
+
+.settings-menu-height {
+  max-height: 450px;
+}
+
+/* settings-menu-height is not used in the HTML file */
+
+.user-profile a {
+  font-size: 12px;
+  color: #1876f2;
+  text-decoration: none;
+}
+
+.settings-menu-inner {
+  padding: 20px;
+  /* border: 1px solid red; */
+}
+
+.settings-menu hr {
+  /* border: 0; */
+  height: 1px;
+  margin: 15px 0;
+  color: #9a9a9a;
+}
+
+.setting-links {
+  border: 2px solid red;
+  display: flex;
+  align-items: center;
+  margin: 15px 0;
+}
+
+.setting-links .setting-icon {
+  width: 38px;
+  margin-right: 10px;
+  border-radius: 50%;
+}
+
+.setting-links a {
+  border: 1px solid blue;
+  display: flex;
+  flex: 1;
+  align-items: center;
+  justify-content: space-between;
+  text-decoration: none;
+  color: #626262;
+}
+
+#dark-btn {
+  position: absolute;
+  width: 45px;
+  /* height: 80px; */
+  border: 1px solid green;
+  top: 20px;
+  right: 20px;
+  background: #ccc;
+  border-radius: 15px;
+  padding: 2px 3px;
+  cursor: pointer;
+  display: flex;
+  transition: padding-left 0.5s, background 0.5s;
+}
+
+/* HOW INLINE-BLOCK WORKS
+  You cannot add width to an inline element like span unless you add inline-block
+*/
+
+#dark-btn span {
+  width: 18px;
+  height: 18px;
+  border: 1px solid red;
+  background: #fff;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+#dark-btn.dark-btn-on {
+  padding-left: 23px;
+  background: #0a0a0a;
+}
+
+/* Width here is for small devices, while max-width here is for large devices */
+
+/* What the hell is inline-flex?  */
+
+/* The reason why we kept giving the post-containers width 100% is because of the large feed images*/
+
+/* Resize property: To remove resize icon in textarea tag */
+
+/* NOTE: Another popular technique of centering with position and translate. left: 50% and translateX(-50%) or right: 50% and translateY(-50%) */
+
+/* NOTE: By default, the width of an element is the content area, but we can set it to 100% of its parent with width:100%
+
+   We can use a popular technique of width: 100% and text-align: center to position text in the middle of their parent container
+*/
+/* Note: Whenever you add position absolute, just wait and see where it will go */
+
+/*
+  So here we are using flex-basis of 18%. Recall that flex basis is for the initial length (width) of FLEX ITEMS.
+
+  Now we want a height/width ratio of 16/9 which is equal to 1.77778
+
+  So, to get our height, we multiply 18 by 1.77778, which is 32.
+
+  But we will not apply the 32% as height, rather we will apply it as padding. Recall box-sizing is for border and padding.
+
+*/
+
+/* The flex-basis property specifies the initial length (a.k.a width) of a flexible item. flex-basis: number|auto|initial|inherit; The number can be a unit length, and auto means the length is equal to the length of the flexible item. If the item has no length specified, the length will be according to its content. Default value is auto. */
+/* Flex grow and shrink are assumed to be both 1 when only flex basis is given */
+
+/* ----------Profile page css begin------------------- */
+.profile-container {
+  border: 2px solid red;
+  padding: 20px 15%;
+  color: #626262;
+}
+
+.cover-img {
+  width: 100%;
+  border-radius: 6px;
+  margin-bottom: 14px;
+}
+
+.profile-details {
+  border: 1px solid blue;
+  background: var(--bg-color);
+  padding: 20px;
+  border-radius: 4px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+.pd-left {
+  border: 2px solid orange;
+}
+
+.pd-right {
+  border: 2px solid orange;
+  text-align: right;
+}
+
+/* Please note: Text align works for anchor tags */
+
+.pd-row {
+  display: flex;
+  align-items: flex-start;
+  /* border: 2px solid purple; */
+}
+
+.pd-image {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  margin-right: 20px;
+  border-radius: 6px;
+}
+
+.pd-row div {
+  border: 1px solid green;
+}
+
+.pd-row div h3 {
+  font-size: 25px;
+  font-weight: 600;
+}
+
+.pd-row div p {
+  font-size: 13px;
+  margin-top: 5px;
+}
+
+.pd-row div img {
+  width: 25px;
+  border-radius: 50%;
+  margin-top: 20px;
+}
+
+.pd-right button {
+  background: #1876f2;
+  border: 0;
+  outline: 0;
+  padding: 6px 10px;
+  display: inline-flex;
+  align-items: center;
+  color: #fff;
+  border-radius: 3px;
+  margin-left: 10px;
+  cursor: pointer;
+}
+
+.pd-right button img {
+  height: 15px;
+  margin-right: 10px;
+}
+
+.pd-right button:first-child {
+  background: #e4e6eb;
+  color: #000;
+}
+
+.pd-right a {
+  background: #e4e6eb;
+  /* padding: 12px; */
+  border: 1px solid red;
+  border-radius: 3px;
+  margin-top: 30px;
+  padding: 12px;
+  display: inline-flex;
+}
+
+.pd-right a img {
+  width: 20px;
+}
+
+.profile-info {
+  display: flex;
+  border: 2px solid purple;
+  align-items: flex-start;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.info-col {
+  flex-basis: 33%;
+  border: 1px solid red;
+}
+
+.post-col {
+  border: 1px solid green;
+  flex-basis: 65%;
+}
+
+.profile-intro {
+  background: var(--bg-color);
+  padding: 20px;
+  margin-bottom: 20px;
+  border: 1px solid brown;
+  border-radius: 4px;
+}
+
+.profile-intro h3 {
+  font-weight: 600;
+}
+
+.intro-text {
+  text-align: center;
+  margin: 10px 0;
+  border: 1px solid red;
+  font-size: 15px;
+}
+
+.intro-text img {
+  width: 15px;
+  margin-bottom: -3px;
+}
+
+.profile-intro hr {
+  border: 0;
+  background: #ccc;
+  height: 1px;
+  margin: 24px 0;
+}
+
+.profile-intro ul li {
+  list-style: none;
+  font-size: 15px;
+  margin: 15px 0;
+  border: 1px solid green;
+  display: flex;
+  align-items: center;
+}
+
+.profile-intro ul li img {
+  width: 26px;
+  margin-right: 10px;
+}
+
+.title-box {
+  display: flex;
+  border: 1px solid red;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.title-box a {
+  text-decoration: none;
+  color: #1876f2;
+  font-size: 14px;
+}
+
+.photo-box {
+  border: 2px solid blue;
+  display: grid;
+  grid-template-columns: repeat(3, auto);
+  gap: 10px;
+  margin-top: 15px;
+}
+
+.photo-box div img {
+  width: 100%;
+  cursor: pointer;
+}
+
+.profile-intro p {
+  font-size: 14px;
+}
+
+.friends-box {
+  border: 2px solid blue;
+  display: grid;
+  grid-template-columns: repeat(3, auto);
+  gap: 10px;
+  margin-top: 15px;
+}
+
+.friends-box div img {
+  width: 100%;
+  cursor: pointer;
+  padding-bottom: 20px;
+  border: 1px solid green;
+}
+
+.friends-box div {
+  position: relative;
+  border: 2px solid red;
+}
+
+.friends-box p {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+/* Note: An img tag is a block element */
+
+/* Please note: Grid di not increase the flex basis, only the images increased. So we had to resize the images with width 100% t get back our original flex basis */
+/* Unlike display flex, grid will not do anything initially */
+
+/* PLEASE NOTE: it is on the li tag that you can remove the list-style, NOT on the ul tag */
+
+/* PLEASE NOTE: Use -ve margin when you want to negate top, bottom, left or right */
+
+/* What is align-item: flex-start = align-items : controls alignment of all items on the cross axis.*/
+/* -----------Profile page css ends--------------- */
