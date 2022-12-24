@@ -57,7 +57,7 @@ body {
 }
 
 nav {
-  border: 2px solid red;
+  /* border: 2px solid red; */
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -144,7 +144,7 @@ nav {
 
 .online {
   position: relative;
-  border: 2px solid red;
+  /* border: 2px solid red; */
 }
 
 .online::after {
@@ -331,13 +331,13 @@ pseudo-selector        1 2 3 4 5 6 7 8 9 10
 /* Main content starts */
 .container {
   display: flex;
-  border: 3px solid red;
+  /* border: 3px solid red; */
   justify-content: space-between;
   padding: 13px 5%;
 }
 
 .left-sidebar {
-  background: #cbdffa;
+  /* background: #cbdffa; */
   /* background: red; */
   flex-basis: 25%;
   position: sticky;
@@ -347,7 +347,7 @@ pseudo-selector        1 2 3 4 5 6 7 8 9 10
 }
 
 .right-sidebar {
-  background: #cbdffa;
+  /* background: #cbdffa; */
   /* background: var(--bg-color); */
   /* background: red; */
   flex-basis: 25%;
@@ -430,13 +430,13 @@ pseudo-selector        1 2 3 4 5 6 7 8 9 10
 
 .event {
   display: flex;
-  border: 2px solid red;
+  /* border: 2px solid red; */
   margin-bottom: 20px;
   font-size: 14px;
 }
 
 .left-event {
-  border: 2px solid green;
+  /* border: 2px solid green; */
   border-radius: 10px;
   width: 65px;
   height: 65px;
@@ -473,7 +473,7 @@ pseudo-selector        1 2 3 4 5 6 7 8 9 10
 }
 
 .right-event {
-  border: 2px solid orange;
+  /* border: 2px solid orange; */
 }
 
 .sidebar-ads {
@@ -490,7 +490,7 @@ pseudo-selector        1 2 3 4 5 6 7 8 9 10
 
 .online-list {
   display: flex;
-  border: 2px solid red;
+  /* border: 2px solid red; */
   align-items: center;
   margin-bottom: 10px;
 }
@@ -506,7 +506,7 @@ pseudo-selector        1 2 3 4 5 6 7 8 9 10
   width: 40px;
   /* border-radius: 50%; */
   margin-right: 15px;
-  border: 1px solid red;
+  /* border: 1px solid red; */
 }
 
 .online-list .online::after {
@@ -526,11 +526,11 @@ pseudo-selector        1 2 3 4 5 6 7 8 9 10
   display: flex;
   justify-content: space-between;
   margin-bottom: 20px;
-  border: 2px solid red;
+  /* border: 2px solid red; */
 }
 
 .story {
-  border: 2px solid green;
+  /* border: 2px solid green; */
   flex-basis: 18%;
   padding-top: 32%;
   position: relative;
@@ -543,7 +543,7 @@ pseudo-selector        1 2 3 4 5 6 7 8 9 10
   position: absolute;
   width: 45px;
   height: 45px;
-  border: 5px solid #1876f2;
+  /* border: 5px solid #1876f2; */
   border-radius: 50%;
   top: 10px;
   left: 10px;
@@ -600,7 +600,7 @@ pseudo-selector        1 2 3 4 5 6 7 8 9 10
 
 .write-post-container {
   width: 100%;
-  border: 2px solid green;
+  /* border: 2px solid green; */
   background: var(--bg-color);
   border-radius: 6px;
   padding: 20px;
@@ -631,7 +631,7 @@ pseudo-selector        1 2 3 4 5 6 7 8 9 10
 }
 
 .post-input-container {
-  border: 2px solid red;
+  /* border: 2px solid red; */
   padding-left: 55px;
   padding-top: 20px;
 }
@@ -646,7 +646,7 @@ pseudo-selector        1 2 3 4 5 6 7 8 9 10
 }
 
 .add-post-links {
-  border: 1px solid purple;
+  /* border: 1px solid purple; */
   display: flex;
   margin-top: 10px;
 }
@@ -654,7 +654,7 @@ pseudo-selector        1 2 3 4 5 6 7 8 9 10
 .add-post-links a {
   text-decoration: none;
   display: flex;
-  border: 1px solid orange;
+  /* border: 1px solid orange; */
   align-items: center;
   color: #626262;
   margin-right: 30px;
@@ -667,7 +667,7 @@ pseudo-selector        1 2 3 4 5 6 7 8 9 10
 }
 
 .post-container {
-  border: 2px solid green;
+  /* border: 2px solid green; */
   width: 100%;
   background: var(--bg-color);
   border-radius: 6px;
@@ -709,7 +709,7 @@ pseudo-selector        1 2 3 4 5 6 7 8 9 10
 }
 
 .post-row {
-  border: 2px solid red;
+  /* border: 2px solid red; */
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -729,7 +729,7 @@ pseudo-selector        1 2 3 4 5 6 7 8 9 10
 }
 
 .activity-icons {
-  border: 1px solid blue;
+  /* border: 1px solid blue; */
   display: flex;
   align-items: center;
 }
@@ -759,7 +759,7 @@ pseudo-selector        1 2 3 4 5 6 7 8 9 10
 }
 
 .footer {
-  border: 2px solid green;
+  /* border: 2px solid green; */
   text-align: center;
   color: #9a9a9a;
   padding: 10px 0 20px;
@@ -809,7 +809,7 @@ pseudo-selector        1 2 3 4 5 6 7 8 9 10
 }
 
 .setting-links {
-  border: 2px solid red;
+  /* border: 2px solid red; */
   display: flex;
   align-items: center;
   margin: 15px 0;
@@ -822,7 +822,7 @@ pseudo-selector        1 2 3 4 5 6 7 8 9 10
 }
 
 .setting-links a {
-  border: 1px solid blue;
+  /* border: 1px solid blue; */
   display: flex;
   flex: 1;
   align-items: center;
@@ -835,7 +835,7 @@ pseudo-selector        1 2 3 4 5 6 7 8 9 10
   position: absolute;
   width: 45px;
   /* height: 80px; */
-  border: 1px solid green;
+  /* border: 1px solid green; */
   top: 20px;
   right: 20px;
   background: #ccc;
@@ -853,7 +853,7 @@ pseudo-selector        1 2 3 4 5 6 7 8 9 10
 #dark-btn span {
   width: 18px;
   height: 18px;
-  border: 1px solid red;
+  /* border: 1px solid red; */
   background: #fff;
   border-radius: 50%;
   display: inline-block;
@@ -896,7 +896,7 @@ pseudo-selector        1 2 3 4 5 6 7 8 9 10
 
 /* ----------Profile page css begin------------------- */
 .profile-container {
-  border: 2px solid red;
+  /* border: 2px solid red; */
   padding: 20px 15%;
   color: #626262;
 }
@@ -908,7 +908,7 @@ pseudo-selector        1 2 3 4 5 6 7 8 9 10
 }
 
 .profile-details {
-  border: 1px solid blue;
+  /* border: 1px solid blue; */
   background: var(--bg-color);
   padding: 20px;
   border-radius: 4px;
@@ -918,11 +918,11 @@ pseudo-selector        1 2 3 4 5 6 7 8 9 10
 }
 
 .pd-left {
-  border: 2px solid orange;
+  /* border: 2px solid orange; */
 }
 
 .pd-right {
-  border: 2px solid orange;
+  /* border: 2px solid orange; */
   text-align: right;
 }
 
@@ -943,7 +943,7 @@ pseudo-selector        1 2 3 4 5 6 7 8 9 10
 }
 
 .pd-row div {
-  border: 1px solid green;
+  /* border: 1px solid green; */
 }
 
 .pd-row div h3 {
@@ -1001,7 +1001,7 @@ pseudo-selector        1 2 3 4 5 6 7 8 9 10
 
 .profile-info {
   display: flex;
-  border: 2px solid purple;
+  /* border: 2px solid purple; */
   align-items: flex-start;
   justify-content: space-between;
   margin-top: 20px;
@@ -1009,11 +1009,11 @@ pseudo-selector        1 2 3 4 5 6 7 8 9 10
 
 .info-col {
   flex-basis: 33%;
-  border: 1px solid red;
+  /* border: 1px solid red; */
 }
 
 .post-col {
-  border: 1px solid green;
+  /* border: 1px solid green; */
   flex-basis: 65%;
 }
 
@@ -1021,7 +1021,7 @@ pseudo-selector        1 2 3 4 5 6 7 8 9 10
   background: var(--bg-color);
   padding: 20px;
   margin-bottom: 20px;
-  border: 1px solid brown;
+  /* border: 1px solid brown; */
   border-radius: 4px;
 }
 
@@ -1032,7 +1032,7 @@ pseudo-selector        1 2 3 4 5 6 7 8 9 10
 .intro-text {
   text-align: center;
   margin: 10px 0;
-  border: 1px solid red;
+  /* border: 1px solid red; */
   font-size: 15px;
 }
 
@@ -1052,7 +1052,7 @@ pseudo-selector        1 2 3 4 5 6 7 8 9 10
   list-style: none;
   font-size: 15px;
   margin: 15px 0;
-  border: 1px solid green;
+  /* border: 1px solid green; */
   display: flex;
   align-items: center;
 }
@@ -1064,7 +1064,7 @@ pseudo-selector        1 2 3 4 5 6 7 8 9 10
 
 .title-box {
   display: flex;
-  border: 1px solid red;
+  /* border: 1px solid red; */
   align-items: center;
   justify-content: space-between;
 }
@@ -1076,7 +1076,7 @@ pseudo-selector        1 2 3 4 5 6 7 8 9 10
 }
 
 .photo-box {
-  border: 2px solid blue;
+  /* border: 2px solid blue; */
   display: grid;
   grid-template-columns: repeat(3, auto);
   gap: 10px;
@@ -1093,7 +1093,7 @@ pseudo-selector        1 2 3 4 5 6 7 8 9 10
 }
 
 .friends-box {
-  border: 2px solid blue;
+  /* border: 2px solid blue; */
   display: grid;
   grid-template-columns: repeat(3, auto);
   gap: 10px;
@@ -1104,12 +1104,12 @@ pseudo-selector        1 2 3 4 5 6 7 8 9 10
   width: 100%;
   cursor: pointer;
   padding-bottom: 20px;
-  border: 1px solid green;
+  /* border: 1px solid green; */
 }
 
 .friends-box div {
   position: relative;
-  border: 2px solid red;
+  /* border: 2px solid red; */
 }
 
 .friends-box p {
